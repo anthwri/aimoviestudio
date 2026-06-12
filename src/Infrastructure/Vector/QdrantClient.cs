@@ -26,7 +26,7 @@ public sealed class QdrantClient
         };
 
         await _http.PutAsJsonAsync(
-            $""http://localhost:6333/collections/{collection}/points"",
+            $"http://localhost:6333/collections/{collection}/points",
             payload);
     }
 
@@ -37,7 +37,7 @@ public sealed class QdrantClient
     {
         var response =
             await _http.PostAsJsonAsync(
-                $""http://localhost:6333/collections/{collection}/points/search"",
+                $"http://localhost:6333/collections/{collection}/points/search",
                 new
                 {
                     vector = vector,

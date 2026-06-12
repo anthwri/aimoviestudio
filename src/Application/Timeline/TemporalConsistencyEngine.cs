@@ -7,11 +7,11 @@ public sealed class TemporalConsistencyEngine
         var temporalHint =
             frameIndex switch
             {
-                < 10 => ""establishing shot, stable lighting"",
-                < 30 => ""slight motion, consistent environment"",
-                _ => ""continuous motion, temporal consistency locked""
+                < 10 => "establishing shot, stable lighting",
+                < 30 => "slight motion, consistent environment",
+                _ => "continuous motion, temporal consistency locked"
             };
 
-        return $""{basePrompt}, {temporalHint}, same character identity across frames"";
+        return $"{basePrompt}, {temporalHint}, same character identity across frames";
     }
 }

@@ -4,9 +4,9 @@ public sealed class CloudGpuInstance
 {
     public Guid Id { get; set; } = Guid.NewGuid();
 
-    public string Provider { get; set; } = ""RunPod""; // or AWS, etc
+    public string Provider { get; set; } = "RunPod"; // or AWS, etc
 
-    public string Region { get; set; } = ""us-east-1"";
+    public string Region { get; set; } = "us-east-1";
 
     public string Endpoint { get; set; } = "";
 

@@ -6,13 +6,13 @@ public sealed class CloudProvisioningService
 {
     private readonly List<CloudGpuInstance> _instances = new();
 
-    public CloudGpuInstance Provision(string provider = ""RunPod"")
+    public CloudGpuInstance Provision(string provider = "RunPod")
     {
         var instance = new CloudGpuInstance
         {
             Provider = provider,
             IsActive = true,
-            Endpoint = $""https://gpu-{Guid.NewGuid()}.cloud.local""
+            Endpoint = $"https://gpu-{Guid.NewGuid()}.cloud.local"
         };
 
         _instances.Add(instance);

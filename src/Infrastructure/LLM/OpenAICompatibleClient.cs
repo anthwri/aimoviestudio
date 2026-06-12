@@ -7,7 +7,7 @@ public sealed class OpenAICompatibleClient : ILLMClient
     private readonly HttpClient _http;
     private readonly string _model;
 
-    public OpenAICompatibleClient(HttpClient http, string model = ""deepseek"")
+    public OpenAICompatibleClient(HttpClient http, string model = "deepseek")
     {
         _http = http;
         _model = model;
@@ -20,12 +20,12 @@ public sealed class OpenAICompatibleClient : ILLMClient
             model = _model,
             messages = new[]
             {
-                new { role = ""system"", content = systemPrompt },
-                new { role = ""user"", content = userPrompt }
+                new { role = "system", content = systemPrompt },
+                new { role = "user", content = userPrompt }
             }
         };
 
-        var response = await _http.PostAsJsonAsync(""/v1/chat/completions"", payload);
+        var response = await _http.PostAsJsonAsync("/v1/chat/completions", payload);
         var json = await response.Content.ReadAsStringAsync();
 
         return json;

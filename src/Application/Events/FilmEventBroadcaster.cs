@@ -16,6 +16,6 @@ public sealed class FilmEventBroadcaster
     {
         await _hub.Clients
             .Group(evt.FilmId.ToString())
-            .SendAsync(""film-update"", evt);
+            .SendAsync("film-update", evt);
     }
 }

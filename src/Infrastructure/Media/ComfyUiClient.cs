@@ -7,7 +7,7 @@ public sealed class ComfyUiClient : IImageGenerator
         // placeholder for real HTTP call to ComfyUI API
         await Task.Delay(500);
 
-        return $""comfyui://generated/{Guid.NewGuid()}"";
+        return $"comfyui://generated/{Guid.NewGuid()}";
     }
 }
 
@@ -17,6 +17,6 @@ public sealed class StableDiffusionClient : IImageGenerator
     {
         await Task.Delay(500);
 
-        return $""sd://image/{Guid.NewGuid()}"";
+        return $"sd://image/{Guid.NewGuid()}";
     }
 }

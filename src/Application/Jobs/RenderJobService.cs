@@ -24,8 +24,8 @@ public sealed class RenderJobService
             FilmId = job.FilmId,
             SceneId = job.SceneId,
             ShotId = job.ShotId,
-            Status = ""running"",
-            Message = ""Rendering started""
+            Status = "running",
+            Message = "Rendering started"
         });
 
         try
@@ -34,15 +34,15 @@ public sealed class RenderJobService
                 job.Prompt,
                 job.NegativePrompt);
 
-            job.OutputPath = $""/generated/{result}.png"";
+            job.OutputPath = $"/generated/{result}.png";
 
             await _events.PublishAsync(new FilmProgressEvent
             {
                 FilmId = job.FilmId,
                 SceneId = job.SceneId,
                 ShotId = job.ShotId,
-                Status = ""completed"",
-                Message = ""Shot rendered successfully""
+                Status = "completed",
+                Message = "Shot rendered successfully"
             });
         }
         catch (Exception ex)
@@ -52,7 +52,7 @@ public sealed class RenderJobService
                 FilmId = job.FilmId,
                 SceneId = job.SceneId,
                 ShotId = job.ShotId,
-                Status = ""failed"",
+                Status = "failed",
                 Message = ex.Message
             });
 

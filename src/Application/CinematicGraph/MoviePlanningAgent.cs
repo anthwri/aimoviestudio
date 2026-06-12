@@ -13,7 +13,7 @@ public sealed class MoviePlanningAgent
 
     public async Task<string> PlanMovie(string idea)
     {
-        var system = ""You are a senior film planner. Break ideas into acts, scenes, and visual beats."";
+        var system = "You are a senior film planner. Break ideas into acts, scenes, and visual beats.";
 
         return await _llm.GenerateAsync(system, idea);
     }

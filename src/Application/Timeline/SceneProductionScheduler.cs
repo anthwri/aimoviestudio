@@ -23,7 +23,7 @@ public sealed class SceneProductionScheduler
         {
             var task = new RenderTask
             {
-                Prompt = $""{prompt}, frame {i}""
+                Prompt = $"{prompt}, frame {i}"
             };
 
             await _dispatcher.DispatchAsync(task);
@@ -31,7 +31,7 @@ public sealed class SceneProductionScheduler
             clip.Frames.Add(new FrameNode
             {
                 FrameIndex = i,
-                ImagePath = task.Status == ""complete"" ? ""rendered.png"" : ""pending.png""
+                ImagePath = task.Status == "complete" ? "rendered.png" : "pending.png"
             });
         }
 

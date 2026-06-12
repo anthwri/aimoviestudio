@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 
 [ApiController]
-[Route(""api/studio"")]
+[Route("api/studio")]
 public sealed class StudioController : ControllerBase
 {
     private readonly StudioStateService _state;
@@ -18,12 +18,12 @@ public sealed class StudioController : ControllerBase
         _audit = audit;
     }
 
-    [HttpGet(""state"")]
+    [HttpGet("state")]
     public IActionResult GetState()
     {
         return Ok(new
         {
-            message = ""Studio operational"",
+            message = "Studio operational",
             auditCount = _audit.GetAll().Count()
         });
     }

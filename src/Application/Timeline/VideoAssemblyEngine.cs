@@ -13,6 +13,6 @@ public sealed class VideoAssemblyEngine
             .OrderBy(f => f.FrameIndex)
             .ToList();
 
-        return $""video://assembled/{scene.SceneName}/{orderedFrames.Count}_frames"";
+        return $"video://assembled/{scene.SceneName}/{orderedFrames.Count}_frames";
     }
 }

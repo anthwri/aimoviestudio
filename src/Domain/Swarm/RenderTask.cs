@@ -6,9 +6,9 @@ public sealed class RenderTask
 
     public string Prompt { get; set; } = "";
 
-    public string Backend { get; set; } = ""comfyui"";
+    public string Backend { get; set; } = "comfyui";
 
-    public string Status { get; set; } = ""queued"";
+    public string Status { get; set; } = "queued";
 
     public Guid AssignedNode { get; set; }
 }

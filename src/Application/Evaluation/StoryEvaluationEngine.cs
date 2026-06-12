@@ -14,7 +14,7 @@ public sealed class StoryEvaluationEngine
     public async Task<string> EvaluateAsync(string screenplay)
     {
         return await _llm.GenerateAsync(
-            ""You are a film critic and story analyst."",
+            "You are a film critic and story analyst.",
             screenplay);
     }
 }

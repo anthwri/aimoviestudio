@@ -6,7 +6,7 @@ public sealed class ContinuityEnforcer
 {
     public string Enforce(SceneNode scene, CharacterIdentity character, string prompt)
     {
-        return $""{prompt}, character: {character.VisualDescription}, consistent outfit: {character.ClothingStyle}, location: {scene.Location}, time: {scene.TimeOfDay}"";
+        return $"{prompt}, character: {character.VisualDescription}, consistent outfit: {character.ClothingStyle}, location: {scene.Location}, time: {scene.TimeOfDay}";
     }
 
     public bool DetectConflict(SceneNode a, SceneNode b)

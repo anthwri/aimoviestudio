@@ -1,8 +1,10 @@
 using Domain.Jobs;
+using Domain.Jobs;
 using Domain.Production;
 using Application.Infrastructure;
 using Application.Production;
 using Infrastructure.ComfyUI;
+using Infrastructure.Media;
 
 namespace Application.Jobs;
 
@@ -25,8 +27,8 @@ public sealed class SmartDistributedRenderService
     {
         var node = _scheduler.SelectBestNode(job, profile);
 
-        if (node == null)
-            throw new Exception(""No available render nodes"");
+        if (node is null)
+            throw new Exception("No available render nodes");
 
         node.ActiveJobs++;
 
@@ -35,7 +37,7 @@ public sealed class SmartDistributedRenderService
             var client = new ComfyUiClient(
                 new HttpClient { BaseAddress = new Uri(node.BaseUrl) });
 
-            await client.GenerateImageAsync(job.Prompt, job.NegativePrompt);
+            await client.GenerateAsync(job.Prompt);
         }
         finally
         {

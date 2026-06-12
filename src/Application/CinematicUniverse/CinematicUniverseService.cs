@@ -1,4 +1,5 @@
 using Domain.CinematicUniverse;
+using Domain.Jobs;
 
 namespace Application.CinematicUniverse;
 
@@ -17,12 +18,12 @@ public sealed class CinematicUniverseService
         {
             Name = name,
             BasePrompt = basePrompt,
-            StyleLock = ""cinematic realism, ultra consistent character identity""
+            StyleLock = "cinematic realism, ultra consistent character identity"
         };
 
         _characters[anchor.CharacterId] = anchor;
 
-        _memory.StoreCharacterEvent(name, ""Character created"");
+        _memory.StoreCharacterEvent(name, "Character created");
 
         return anchor;
     }
@@ -39,7 +40,7 @@ public sealed class CinematicUniverseService
 
         if (drift)
         {
-            _memory.StoreCharacterEvent(anchor.Name, ""Drift detected and corrected"");
+            _memory.StoreCharacterEvent(anchor.Name, "Drift detected and corrected");
         }
 
         return job;

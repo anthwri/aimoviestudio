@@ -14,8 +14,8 @@ public sealed class InfiniteCinemaLoop
     public async Task<string> TickAsync(string universeState)
     {
         var system =
-            ""You are a continuous cinematic universe generator. "" +
-            ""You never stop producing, improving, and evolving films."";
+            "You are a continuous cinematic universe generator. " +
+            "You never stop producing, improving, and evolving films.";
 
         return await _llm.GenerateAsync(system, universeState);
     }

@@ -9,7 +9,7 @@ public sealed class ReRenderEngine
         if (job.State == RenderState.Rejected)
             return true;
 
-        if (job.OutputPath.Contains(""artifact""))
+        if (job.OutputPath.Contains("artifact"))
             return true;
 
         return false;
@@ -18,7 +18,7 @@ public sealed class ReRenderEngine
     public RenderJobState Retry(RenderJobState job)
     {
         job.State = RenderState.Queued;
-        job.Prompt += "", fix continuity, improve visual consistency"";
+        job.Prompt += ", fix continuity, improve visual consistency";
         return job;
     }
 }

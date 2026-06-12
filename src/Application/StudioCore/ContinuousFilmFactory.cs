@@ -14,8 +14,8 @@ public sealed class ContinuousFilmFactory
     public async Task<string> TickProductionLoop(string backlog)
     {
         var system =
-            ""You are an autonomous film production factory. "" +
-            ""Continuously select, improve, and generate film scenes for production."";
+            "You are an autonomous film production factory. " +
+            "Continuously select, improve, and generate film scenes for production.";
 
         return await _llm.GenerateAsync(system, backlog);
     }

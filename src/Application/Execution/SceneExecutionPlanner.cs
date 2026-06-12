@@ -10,9 +10,9 @@ public sealed class SceneExecutionPlanner
         {
             yield return new RenderJob
             {
-                Id = $""{sceneId}_frame_{i}"",
-                Type = ""frame_render"",
-                Payload = $""Scene:{sceneId};Frame:{i}""
+                Id = $"{sceneId}_frame_{i}",
+                Type = "frame_render",
+                Payload = $"Scene:{sceneId};Frame:{i}"
             };
         }
     }
