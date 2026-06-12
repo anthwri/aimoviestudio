@@ -11,8 +11,8 @@ public sealed class LoraJobBuilder
             CharacterName = character.Name,
             DatasetPath = datasetPath,
             Epochs = 12,
-            BaseModel = ""sdxl-base-1.0"",
-            OutputPath = $""models/lora/{character.Name}.safetensors""
+            BaseModel = "sdxl-base-1.0",
+            OutputPath = $"models/lora/{character.Name}.safetensors"
         };
     }
 }

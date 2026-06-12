@@ -1,6 +1,8 @@
 using Domain.Jobs;
+using Domain.Jobs;
 using Application.Infrastructure;
 using Infrastructure.ComfyUI;
+using Infrastructure.Media;
 
 namespace Application.Jobs;
 
@@ -22,7 +24,7 @@ public sealed class DistributedRenderService
         var node = _registry.GetLeastLoadedNode();
 
         if (node == null)
-            throw new Exception(""No render nodes available"");
+            throw new Exception("No render nodes available");
 
         node.ActiveJobs++;
 
@@ -32,11 +34,9 @@ public sealed class DistributedRenderService
             var client = new ComfyUiClient(
                 new HttpClient { BaseAddress = new Uri(node.BaseUrl) });
 
-            var result = await client.GenerateImageAsync(
-                job.Prompt,
-                job.NegativePrompt);
+            var result = await client.GenerateAsync(job.Prompt);
 
-            job.OutputPath = $""{node.Name}/generated/{result}.png"";
+            job.OutputPath = $"{node.Name}/generated/{result}.png";
         }
         finally
         {

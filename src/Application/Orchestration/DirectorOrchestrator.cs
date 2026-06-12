@@ -27,7 +27,7 @@ public sealed class DirectorOrchestrator
             job.Prompt,
             qualityHint);
 
-        if (decision.Action == ""REWRITE_SCENE"" && decision.ModifiedPrompt != null)
+        if (decision.Action == "REWRITE_SCENE" && decision.ModifiedPrompt != null)
         {
             job.Prompt = decision.ModifiedPrompt;
         }

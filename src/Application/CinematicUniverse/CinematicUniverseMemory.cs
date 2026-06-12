@@ -24,11 +24,11 @@ public sealed class CinematicUniverseMemory
 
     public void StoreCharacterEvent(string characterName, string eventDescription)
     {
-        Store($""character:{characterName}"", eventDescription);
+        Store($"character:{characterName}", eventDescription);
     }
 
     public void StoreWorldState(string scene, string state)
     {
-        Store($""world:{scene}"", state);
+        Store($"world:{scene}", state);
     }
 }

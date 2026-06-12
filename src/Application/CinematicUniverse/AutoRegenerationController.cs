@@ -1,4 +1,5 @@
 using Application.Jobs;
+using Domain.Jobs;
 using Domain.CinematicUniverse;
 
 namespace Application.CinematicUniverse;
@@ -10,7 +11,7 @@ public sealed class AutoRegenerationController
         if (!driftDetected)
             return job;
 
-        job.Prompt += "", fix identity drift, restore original character appearance, consistent cinematic identity"";
+        job.Prompt += ", fix identity drift, restore original character appearance, consistent cinematic identity";
 
         return job;
     }

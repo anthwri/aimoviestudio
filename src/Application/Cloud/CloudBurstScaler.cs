@@ -19,7 +19,7 @@ public sealed class CloudBurstScaler
     {
         if (queuedJobs > activeNodes * 5)
         {
-            _provisioner.Provision(""RunPod"");
+            _provisioner.Provision("RunPod");
         }
     }
 

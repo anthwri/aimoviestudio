@@ -8,7 +8,7 @@ public sealed class CharacterLifecycle
 
     public int Age { get; set; }
 
-    public string CurrentArcState { get; set; } = ""introduction"";
+    public string CurrentArcState { get; set; } = "introduction";
 
     public List<string> MajorEvents { get; set; } = new();
 }

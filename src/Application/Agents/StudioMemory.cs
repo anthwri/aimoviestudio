@@ -14,8 +14,8 @@ public sealed class StudioMemory
 
     public string GetContext(string key)
     {
-        if (!_memory.ContainsKey(key)) return """";
+        if (!_memory.ContainsKey(key)) return "";
 
-        return string.Join(""\n"", _memory[key].TakeLast(10));
+        return string.Join("\n", _memory[key].TakeLast(10));
     }
 }

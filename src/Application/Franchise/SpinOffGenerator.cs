@@ -13,7 +13,7 @@ public sealed class SpinOffGenerator
 
     public async Task<string> GenerateSpinOffIdea(string canonSummary)
     {
-        var system = ""You are a franchise producer. Generate spin-off movie ideas based on existing canon."";
+        var system = "You are a franchise producer. Generate spin-off movie ideas based on existing canon.";
 
         return await _llm.GenerateAsync(system, canonSummary);
     }

@@ -6,6 +6,6 @@ public sealed class IdentityPromptLocker
 {
     public string Apply(CharacterVisualAnchor anchor, string prompt)
     {
-        return $""{prompt}, character: {anchor.BasePrompt}, style lock: {anchor.StyleLock}, consistent face, same identity, same person across all frames"";
+        return $"{prompt}, character: {anchor.BasePrompt}, style lock: {anchor.StyleLock}, consistent face, same identity, same person across all frames";
     }
 }

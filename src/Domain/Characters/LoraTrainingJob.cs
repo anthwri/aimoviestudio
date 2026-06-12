@@ -10,7 +10,7 @@ public sealed class LoraTrainingJob
 
     public int Epochs { get; set; } = 10;
 
-    public string BaseModel { get; set; } = ""sdxl-base-1.0"";
+    public string BaseModel { get; set; } = "sdxl-base-1.0";
 
     public string OutputPath { get; set; } = "";
 

@@ -19,8 +19,8 @@ public sealed class ContinuousUniverseLoop
         var films = string.Join("\n", _store.GetFilms().Select(f => f.Title));
 
         var system =
-            ""You are an autonomous cinematic universe engine. "" +
-            ""Continuously evolve stories, characters, and franchises."";
+            "You are an autonomous cinematic universe engine. " +
+            "Continuously evolve stories, characters, and franchises.";
 
         var output = await _llm.GenerateAsync(system, films);
 

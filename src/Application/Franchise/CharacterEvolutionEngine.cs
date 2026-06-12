@@ -27,14 +27,14 @@ public sealed class CharacterEvolutionEngine
 
         character.MajorEvents.Add(eventDescription);
 
-        if (eventDescription.Contains(""years later""))
+        if (eventDescription.Contains("years later"))
         {
             character.Age += 5;
         }
 
-        if (eventDescription.Contains(""trauma""))
+        if (eventDescription.Contains("trauma"))
         {
-            character.CurrentArcState = ""damaged"";
+            character.CurrentArcState = "damaged";
         }
     }
 }

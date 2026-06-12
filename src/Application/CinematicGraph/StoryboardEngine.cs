@@ -14,13 +14,13 @@ public sealed class StoryboardEngine
 
     public async Task<List<ShotNode>> GenerateStoryboard(string script)
     {
-        var system = @""You are a film storyboard generator.
+        var system = @"You are a film storyboard generator.
 Return structured JSON-like shot breakdown with:
 - scene description
 - camera angle
 - visual prompt
 - lighting
-Keep consistency across shots."";
+Keep consistency across shots.";
 
         var response = await _llm.GenerateAsync(system, script);
 
@@ -30,7 +30,7 @@ Keep consistency across shots."";
             new ShotNode
             {
                 Prompt = response,
-                CameraAngle = ""wide cinematic shot""
+                CameraAngle = "wide cinematic shot"
             }
         };
     }

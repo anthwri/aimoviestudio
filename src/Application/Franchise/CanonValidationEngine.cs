@@ -10,10 +10,10 @@ public sealed class CanonValidationEngine
 
         foreach (var e in canon)
         {
-            if (proposedEvent.Contains(""alive"") && e.Description.Contains(""died""))
+            if (proposedEvent.Contains("alive") && e.Description.Contains("died"))
                 return false;
 
-            if (proposedEvent.Contains(""same location"") && e.Description.Contains(""different location""))
+            if (proposedEvent.Contains("same location") && e.Description.Contains("different location"))
                 return false;
         }
 

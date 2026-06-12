@@ -20,7 +20,7 @@ public sealed class CinemaRuntimeEngine
     {
         var scene = await _scheduler.ProduceSceneAsync(name, prompt);
 
-        var video = _ffmpeg.EncodeFramesToVideo(name, $""{name}_final"");
+        var video = _ffmpeg.EncodeFramesToVideo(name, $"{name}_final");
 
         var stream = _ffmpeg.StreamVideo(video);
 

@@ -10,11 +10,11 @@ public sealed class VisualDriftDetector
 
         var mismatchSignals = new[]
         {
-            ""different face"",
-            ""changed character"",
-            ""inconsistent identity"",
-            ""extra person"",
-            ""wrong outfit""
+            "different face",
+            "changed character",
+            "inconsistent identity",
+            "extra person",
+            "wrong outfit"
         };
 
         return mismatchSignals.Any(actualOutputHint.Contains);

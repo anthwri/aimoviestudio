@@ -16,13 +16,13 @@ public sealed class AutonomousStudioOrganism
     public async Task<string> ThinkAsync(string trigger)
     {
         var system =
-            ""You are an autonomous film studio intelligence. "" +
-            ""You manage universe continuity, creative direction, executive decisions, "" +
-            ""and long-term franchise evolution. Always reason globally."";
+            "You are an autonomous film studio intelligence. " +
+            "You manage universe continuity, creative direction, executive decisions, " +
+            "and long-term franchise evolution. Always reason globally.";
 
         var input =
-            $""STUDIO STATE:\n{_state.UniverseMemory}\n{_state.CanonHistory}\n{_state.LearningState}\n"" +
-            $""TRIGGER:\n{trigger}"";
+            $"STUDIO STATE:\n{_state.UniverseMemory}\n{_state.CanonHistory}\n{_state.LearningState}\n" +
+            $"TRIGGER:\n{trigger}";
 
         var output = await _llm.GenerateAsync(system, input);
 

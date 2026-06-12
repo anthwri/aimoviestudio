@@ -16,8 +16,8 @@ public sealed class FilmAnalyticsService
         var timeline = await _events.GetByFilmAsync(filmId, CancellationToken.None);
 
         var total = timeline.Count;
-        var failed = timeline.Count(e => e.EventType == ""failed"");
-        var completed = timeline.Count(e => e.EventType == ""completed"");
+        var failed = timeline.Count(e => e.EventType == "failed");
+        var completed = timeline.Count(e => e.EventType == "completed");
 
         return new
         {
