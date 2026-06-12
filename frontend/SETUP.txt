@@ -1,0 +1,6 @@
+Run inside /frontend:
+
+npm create vite@latest . -- --template vue
+npm install
+npm install @microsoft/signalr axios
+npm run dev
